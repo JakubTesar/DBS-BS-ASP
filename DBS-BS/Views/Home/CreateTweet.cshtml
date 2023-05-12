@@ -1,0 +1,30 @@
+﻿@model DBS_BS.FormModels.TweetFormModel
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Create Tweet</title>
+</head>
+<body class="bg-dark text-white">
+<div>
+    <div class="container">
+        <h1 class="m-2">Create Tweet</h1>
+        <form method="post" asp-controller="Home" asp-action="CreateTweet">
+            <div class="form-group gap-3">
+                <label for="Author">Author:</label>
+                <input type="text" asp-for="Author" name="Author" class="form-control w-25"/>
+                 <label for="Content">Content:</label>
+                <input type="text" asp-for="Content" name="Content" class="form-control w-25"/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create Tweet" class="btn btn-primary mt-2"/>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <a href="../Views/Home/Index.cshtml" class="btn btn-secondary">View Tweets</a>
+</div>
+
+</body>
+</html>

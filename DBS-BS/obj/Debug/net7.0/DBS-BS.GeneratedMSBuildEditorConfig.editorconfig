@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Tessi\Documents\GitHub\DBS-BS\DBS-BS
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Tessi/Documents/GitHub/DBS-BS/DBS-BS/Views/Home/CreateTweet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVUd2VldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tessi/Documents/GitHub/DBS-BS/DBS-BS/Views/Home/EditTweet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0VHdlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tessi/Documents/GitHub/DBS-BS/DBS-BS/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

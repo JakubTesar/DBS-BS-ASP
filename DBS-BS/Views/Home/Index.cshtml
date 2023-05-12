@@ -1,9 +1,42 @@
 ﻿@model System.Collections.Generic.List<TweetEntity>
 @{
     ViewData["Title"] = "Home Page";
-    
-}
 
-<div>
-    @Model[0].TweetId;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Tweets</title>
+</head>
+<body class="bg-dark text-white">
+<h1 class="m-2">Welcome to BMCR</h1>
+<div class="d-flex justify-content-center flex-wrap m-5">
+    @if (@Model != null)
+    {
+        foreach (TweetEntity t in @Model)
+        {
+            <div class="card bg-dark border m-2" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@t.Author</h5>
+                    <p>@t.Content</p>
+                    <p>@t.Likes</p>
+                    <a asp-controller="Home" asp-action="EditTweet" asp-route-ID="@t.TweetId" class="btn btn-warning">✏</a>
+                    <a asp-controller="Home" asp-action="DeleteTweet" asp-route-ID="@t.TweetId" class="btn btn-danger">💣</a>
+                    <a asp-controller="Home" asp-action="LikeTweet" asp-route-ID="@t.TweetId" class="btn btn-info">👍🏿</a>
+                </div>
+            </div>
+        }
+    }
 </div>
+<div class="d-flex justify-content-center">
+    <a type="button" class="btn btn-success "href="/Home/CreateTweet">
+         New Tweet
+    </a>
+</div>
+
+</body>
+</html>
